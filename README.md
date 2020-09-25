@@ -128,7 +128,7 @@ spec:
     app: autoscale-example
     component: broker
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rabbitmq-broker
@@ -160,7 +160,7 @@ spec:
         - containerPort: 15672
           hostPort: 15672
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo-node
@@ -191,7 +191,7 @@ spec:
             cpu: 200m
             memory: 200Mi
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: autoscaler
